@@ -11,3 +11,4 @@
 # End of https://www.gitignore.io/api/visualstudiocode
 app/node_modules/
 GoalLineStand.rar
+.DS_Store

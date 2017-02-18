@@ -1,11 +1,9 @@
 
-//<!--GLOBAL ANGULAR-->
-
 (function () {
     'use strict';
 angular
-.module('routerApp', ['ui.router','formly', 'formlyBootstrap', 'ngAnimate', 'ui.bootstrap', 'ngMessages', 
- 'ngStorage', 'ui.grid', 'restangular', 'formly_templates', 'nya.bootstrap.select', 
+.module('routerApp', ['ui.router','formly', 'formlyBootstrap', 'ngAnimate', 'ui.bootstrap', 'ngMessages',
+ 'ngStorage', 'ui.grid', 'restangular', 'formly_templates', 'nya.bootstrap.select',
 'rzModule', 'ui.mask', 'angular-3d-carousel', 'ui.grid.autoResize'])
 
 .service('DB', function($q) {
@@ -49,13 +47,13 @@ angular
                 var agentTemp = db.prepare('SELECT * FROM Agents');
                 for(var agents = []; agentTemp.step();) agents.push(agentTemp.getAsObject());
                 var coachTemp = db.prepare('SELECT * FROM Coaches');
-                for(var coaches = []; coachTemp.step();) coaches.push(coachTemp.getAsObject()); 
+                for(var coaches = []; coachTemp.step();) coaches.push(coachTemp.getAsObject());
                 var draftTemp = db.prepare('SELECT * FROM DraftPlayers');
                 for(var draftPlayers = []; draftTemp.step();) draftPlayers.push(draftTemp.getAsObject());
                 var ownerTemp = db.prepare('SELECT * FROM Owners');
-                for(var owners = []; ownerTemp.step();) owners.push(ownerTemp.getAsObject());   
+                for(var owners = []; ownerTemp.step();) owners.push(ownerTemp.getAsObject());
                 var personnelTemp = db.prepare('SELECT * FROM Personnel');
-                for(var personnel = []; personnelTemp.step();) personnel.push(personnelTemp.getAsObject()); 
+                for(var personnel = []; personnelTemp.step();) personnel.push(personnelTemp.getAsObject());
                 var rosterTemp = db.prepare('SELECT * FROM RosterPlayers');
                 for(var rosterPlayers = []; rosterTemp.step();) rosterPlayers.push(rosterTemp.getAsObject());
                 var teamTemp = db.prepare('SELECT * FROM Teams ORDER BY TeamName');
@@ -85,7 +83,7 @@ angular
         return defer.promise;
     };
 
-    
+
 }])
 
 .run(function(DB, dataService) {
@@ -97,16 +95,16 @@ angular
 })
 
 .controller('loadCtrl', [ "$scope", "DB", function loadCtrl($scope, DB) {
-        $scope.appState =  DB.load;    
+        $scope.appState =  DB.load;
 }])
 
-.config(['$stateProvider', '$urlRouterProvider', 
+.config(['$stateProvider', '$urlRouterProvider',
 function($stateProvider, $urlRouterProvider) {
-    
-    $urlRouterProvider.otherwise('/home'); 
+
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
-        
+
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
@@ -114,10 +112,10 @@ function($stateProvider, $urlRouterProvider) {
         })
         //START GAME--MAIN
         .state('Start', {
-            url: '/start',            
+            url: '/start',
             templateUrl: 'New_Game_Wizard/new_game.html',
             controller: 'newGameCtrl',
-            controllerAs: 'vm'       
+            controllerAs: 'vm'
         })
         //nested Start states--url will be Start/profile
         .state('Start.career', {
@@ -127,7 +125,7 @@ function($stateProvider, $urlRouterProvider) {
             controller: 'careerCtrl',
             controllerAs: 'vm'
         })
-        
+
         .state('Start.career2', {
             url: '/career2',
             params: {model: null},
@@ -184,12 +182,12 @@ function($stateProvider, $urlRouterProvider) {
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('settings', {
-            // we'll get to this in a bit       
+            // we'll get to this in a bit
         })
 
         .state('menu', {
 
-        });      
+        });
 }])
 
 .run(['$rootScope', '$state', '$stateParams',
@@ -198,5 +196,3 @@ function($stateProvider, $urlRouterProvider) {
     $rootScope.$stateParams = $stateParams;
 }]);
 })();
-
-

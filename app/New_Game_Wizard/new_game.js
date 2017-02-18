@@ -18,12 +18,12 @@ vm.fields = [
             controller: function($scope) { //update panel titles for the next menu here based on what button is clicked
                 $scope.Update = function() {
                     //removes the enter animation and adds the exit animation
-                    angular.element('.newGame').removeClass('bounceInRight').addClass('bounceOutLeft');
+                    //angular.element('.newGame').removeClass('bounceInRight').addClass('bounceOutLeft');
             };
         },
         }
 ];
 
-              
+
 });
 })();
