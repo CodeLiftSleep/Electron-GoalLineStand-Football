@@ -13,7 +13,8 @@ angular
             wrapper: 'panel',
             type: 'leagueType',
             templateOptions: {
-                label: 'League Creation'
+                label: 'League Creation',
+                templateUrl: '../html/Start/league_type.html'
             },
             controller: function($scope) {
                 $scope.Update = function() {
