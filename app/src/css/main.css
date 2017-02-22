@@ -1,0 +1,149 @@
+/*FONTS*/
+@font-face {
+  font-family: raiderFont;
+  src:url(../fonts/Raiderfont.ttf);
+}
+
+@font-face {
+  font-family: NFL_Minnesota_Vikings;
+  src:url(../fonts/NFL_Minnesota_Vikings.ttf);
+}
+
+/*NAVBAR*/
+.navbar-brand img{
+  height:25px;
+  width:auto;
+}
+
+.navbar.navbar-inverse {
+  opacity: 0.7;
+  background-color: white;
+  border:none;
+  border-radius:0;
+}
+
+/*BACKGROUND HOME*/
+.body-background{
+  background: url(../img/backgrounds/blur_21490309712_157810cdd4_o.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* LOADER */
+.spinner {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  margin:  auto;
+  opacity: 0.9;
+  position: absolute;
+}
+
+.spinner .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #ffffff;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.spinner .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.spinner .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.spinner .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.spinner .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.spinner .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.spinner .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.spinner .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.spinner .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.spinner .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+/*MENU HOME*/
+
+.title{
+    color: white;
+    text-align: center;
+    font-family: NFL_Minnesota_Vikings;
+    font-size: 3em;
+}
+
+.home-screen{
+  bottom: 0;
+  height: 50%;
+  width: 60%;
+  margin: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.9;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+
+
+/*FORM LEAGUE CREATION*/
+
+body{
+   overflow: scroll;
+}
