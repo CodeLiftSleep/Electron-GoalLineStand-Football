@@ -21,16 +21,22 @@ body{
 }
 
 /*NAVBAR*/
-.navbar-brand img{
-  height:25px;
+.logo{
+  height:80px;
   width:auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;
+  display: block;
+  z-index: 100;
 }
 
 .navbar.navbar-inverse {
   //opacity: 0.7;
-  background-color: $black;
+  background-color: $indigo;
   border:none;
   border-radius:0;
+  position: relative;
 }
 
 /*BACKGROUND HOME*/

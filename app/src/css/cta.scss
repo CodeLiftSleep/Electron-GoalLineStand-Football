@@ -7,7 +7,7 @@ a.cta {
 	cursor: pointer;
 	display: block;
 	position: relative;
-	border: 2px solid $indigo;
+	border: 2px solid $red;
 	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 a.cta:hover {
@@ -29,7 +29,7 @@ a.cta:before {
 	z-index: -1;
 	content: '';
 	color: #000 !important;
-	background: $indigo;
+	background: $red;
 	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 

@@ -49,7 +49,8 @@
     "sql.js": "^0.4.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node_modules/.bin/electron app/assets/html/index.html"
   },
   "repository": {
     "type": "git",

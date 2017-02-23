@@ -17,7 +17,7 @@ gulp
 
 # Launch
 ```
-node_modules/.bin/electron app/assets/html/index.html
+npm run run
 ```
 
 # notes
