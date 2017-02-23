@@ -1,0 +1,21 @@
+form(ng-submit="vm.onSubmit()" novalidate class="start-career2 animated bounceInRight")
+    div( class="panel panel-primary")
+        div(class="panel-heading px-nested-panel-heading clearfix mainPanelHeader")
+            strong(class="control-label") Choose Career Settings
+        div( class="panel-body px-nested-panel-body")
+            div(class="sectionLabel")
+              strong(class="control-label") Expansion Settings
+            formly-form(model="vm.model" fields="vm.careerExpansion" form="vm.form" hide-directive="ng-show")
+            div(class="sectionLabel")
+              strong(class="control-label") Relocation Settings
+            formly-form(model="vm.model" fields="vm.careerRelocation" form="vm.form" hide-directive="ng-show")
+            div(class="sectionLabel")
+              strong(class="control-label") Draft Settings
+            formly-form(model="vm.model" fields="vm.careerColDraft" form="vm.form" hide-directive="ng-show")
+            div(class="sectionLabel")
+              strong(class="control-label") Financial Settings
+            formly-form(model="vm.model" fields="vm.careerFinancials" form="vm.form" hide-directive="ng-show")
+            button(type="button" class="btn btn-primary pull-left hvr-grow-shadow" onclick="$('.start-career2').removeClass('bounceInRight').addClass('bounceOutLeft')" ng-click="$state.go(Start.career, {model: vm.model})")
+              span(style="margin-right: 3px;" class="glyphicon glyphicon-circle-arrow-left pull-left") Prev Page
+            button(type="button" class="btn btn-primary pull-right hvr-grow-shadow" onclick="$('.start-career2').removeClass('bounceInRight').addClass('bounceOutLeft')" ng-click="$state.go('Start.career3', {model: vm.model})")
+              span(style="margin-left: 3px;" class="glyphicon glyphicon-circle-arrow-right pull-right") Next Page

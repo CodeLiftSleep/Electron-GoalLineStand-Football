@@ -1,6 +1,7 @@
 var devBuild = (process.env.NODE_ENV !== 'production'),
     gulp = require('gulp'),
     gutil = require('gulp-util'),
+    pug = require('gulp-pug'),
     htmlmin = require('gulp-htmlmin'),
     deporder = require('gulp-deporder'),
     stripdebug = require('gulp-strip-debug'),
@@ -9,6 +10,7 @@ var devBuild = (process.env.NODE_ENV !== 'production'),
     ngAnnotate = require('gulp-ng-annotate'),
     concatCss = require('gulp-concat-css'),
     uglifycss = require('gulp-uglifycss'),
+    sass = require('gulp-sass'),
     jshint = require('gulp-jshint');
 
 
@@ -21,6 +23,7 @@ gulp.task('html', function() {
     gulp.src([
             'app/src/html/**/*'
         ])
+        .pipe(pug())
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
@@ -79,6 +82,7 @@ gulp.task('jquery', function() {
 // CSS processing
 gulp.task('css', function() {
     return gulp.src([
+            '!app/src/css/colors.png',
             'app/src/css/**/*',
             'node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/nya-bootstrap-select/dist/css/nya-bs-select.css',
@@ -87,6 +91,7 @@ gulp.task('css', function() {
             'node_modules/css-toggle-switch/dist/toggle-switch.css',
             'node_modules/angular-ui-grid/ui-grid.min.css'
         ])
+        .pipe(sass().on('error', sass.logError))
         .pipe(concatCss("bundle.css"))
         .pipe(uglifycss())
         .pipe(gulp.dest(folder.build + 'css/'));

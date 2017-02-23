@@ -27,18 +27,16 @@
         .config(function(formlyConfigProvider) {
             formlyConfigProvider.setWrapper([{
                     name: 'panel', //creates a primary panel header
-                    template: `<div class="panel panel-primary">
-                        <div class="panel-heading px-nested-panel-heading clearfix">
-                            <strong class="control-label" ng-if="options.templateOptions.label">
-                                {{options.templateOptions.label}}
-                            </strong>
+                    template: `
+                        <div class="big-title">
+                          {{options.templateOptions.label}}
                         </div>
 
-                            <div class="panel-body px-nested-panel-body">
-                                <formly-transclude></formly-transclude>
-                            </div>
+                        <div class="home-screen">
+                          <formly-transclude></formly-transclude>
+                        </div>
 
-                    </div>`
+                    `
                 },
                 {
                     name: 'well',

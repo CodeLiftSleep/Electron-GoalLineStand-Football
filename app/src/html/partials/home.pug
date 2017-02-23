@@ -1,0 +1,10 @@
+.home-screen
+    a(id="start" class="cta" ui-sref="Start") Start New Game
+    a(class="cta" ui-sref="Load") Load Saved Game
+    a(class="cta" ui-sref="Settings" href="#todo") Settings
+    a(class="cta" ui-sref="Exit") Exit Game
+    //
+      <button id="start" class="cta" onclick="$('.loadScreen').removeClass('animated zoomInDown')" ui-sref="Start">Start New Game</button>
+      <button class="cta" ui-sref="Load">Load Saved Game</button>
+      <button class="cta" ui-sref="Settings">Settings</button>
+      <button class="cta" ui-sref="Exit">Exit Game</button>

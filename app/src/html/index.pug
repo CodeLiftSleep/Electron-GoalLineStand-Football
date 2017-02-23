@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+      base(href="")
+      link(rel="stylesheet" type="text/css" href="../css/bundle.css")
+      script(src="../js/libs/jquery.min.js" onload="$ = jQuery = module.exports;")
+      script(src='../js/bundle.js')
+
+      title(ng-show="!appState.isLoading" class="fadein fadeout") GoalLine Stand Football
+
+      //apply our angular app to our site
+
+  body(ng-app="routerApp" class="body-background")
+
+    //NAVIGATION
+    nav(class="navbar navbar-inverse" role="navigation")
+        div(class="navbar-header")
+            a(class="navbar-brand" ui-sref="home") home
+              //img(src="../img/utils/logo.png" alt="")
+
+    //MAIN CONTENT
+    div(class="container")
+
+        //THIS IS WHERE WE WILL INJECT OUR CONTENT
+        div(ng-controller="loadCtrl")
+            div(ng-show="appState.isLoading" class="fadeout")
+                div(class="spinner")
+                    div(class="sk-cube sk-cube1")
+                    div(class="sk-cube sk-cube2")
+                    div(class="sk-cube sk-cube3")
+                    div(class="sk-cube sk-cube4")
+                    div(class="sk-cube sk-cube5")
+                    div(class="sk-cube sk-cube6")
+                    div(class="sk-cube sk-cube7")
+                    div(class="sk-cube sk-cube8")
+                    div(class="sk-cube sk-cube9")
+
+            div(ng-show="!appState.isLoading" class="loadScreen")
+                div(ui-view)

@@ -10,6 +10,7 @@ So we will have a Javascript/HTML/CSS UI front end and a C#/VB/WPF .Net backend 
 
 # Setup
 ```
+export NODE_ENV=production
 npm install
 gulp
 ```

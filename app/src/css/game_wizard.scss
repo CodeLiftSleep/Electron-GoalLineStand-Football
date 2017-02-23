@@ -1,0 +1,53 @@
+
+/*MENU HOME*/
+
+.title{
+    color: white;
+    text-align: center;
+    font-family: NFL_Minnesota_Vikings;
+    font-size: 3em;
+}
+
+.home-screen{
+  bottom: 0;
+  height: 50%;
+  width: 60%;
+  margin: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.9;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+
+.home-screen h4{
+  color:white;
+  font: 23px NFL_Minnesota_Vikings;
+  text-align: center;
+}
+
+.big-title{
+  color:white;
+  font:40px NFL_Minnesota_Vikings;
+  text-align: center;
+}
