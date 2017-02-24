@@ -223,11 +223,13 @@
               }
             ];
 
-            vm.careerGameday = [{
+            vm.careerGameday = [
+              {
                 className: 'row settings',
-                fieldGroup: [{
+                fieldGroup: [
+                  {
                         key: 'RosterSize',
-                        className: 'col-xs-6',
+                        className: 'col-md-4',
                         type: 'nya-bootstrapSelect',
                         defaultValue: '53',
                         templateOptions: {
@@ -320,10 +322,10 @@
                                 }
                             ]
                         }
-                    },
-                    {
+                  },
+                  {
                         key: 'Inactives',
-                        className: 'col-xs-6',
+                        className: 'col-md-4',
                         type: 'nya-bootstrapSelect',
                         defaultValue: '7',
                         templateOptions: {
@@ -396,10 +398,10 @@
                                 }
                             ]
                         }
-                    },
-                    {
+                  },
+                  {
                         key: 'PracticeSquad',
-                        className: 'col-xs-6',
+                        className: 'col-md-4',
                         type: 'nya-bootstrapSelect',
                         defaultValue: '8',
                         templateOptions: {
@@ -460,10 +462,15 @@
                                 },
                             ]
                         }
-                    },
+                  }
+                ]
+              },
+              {
+                className: 'row',
+                fieldGroup: [
                     {
                         key: 'Penalties',
-                        className: 'col-xs-6',
+                        className: 'col-md-12',
                         type: 'vertSlider',
                         defaultValue: 100,
                         templateOptions: {
@@ -476,10 +483,15 @@
                                 showTicks: false
                             }
                         }
-                    },
+                    }
+                  ]
+              },
+              {
+                className: 'row',
+                fieldGroup: [
                     {
                         key: 'QuarterLen',
-                        className: 'col-xs-6',
+                        className: 'col-md-4',
                         type: 'nya-bootstrapSelect',
                         defaultValue: '15',
                         templateOptions: {
@@ -553,7 +565,7 @@
                     },
                     {
                         key: 'OTFormat',
-                        className: 'col-xs-6',
+                        className: 'col-md-4',
                         type: 'nya-bootstrapSelect',
                         defaultValue: 'NFL',
                         templateOptions: {
@@ -583,7 +595,7 @@
                     },
                     {
                         key: 'OTLength',
-                        className: 'col-xs-6',
+                        className: 'col-md-4',
                         hideExpression: 'model.OTFormat.value === "None"',
                         type: 'nya-bootstrapSelect',
                         defaultValue: 'Quarter Length',
@@ -641,7 +653,10 @@
                         }
                     }
                 ]
-            }];
+               }
+
+
+            ];
             vm.careerSchedule = [{
                     className: 'row settings',
                     fieldGroup: [{
