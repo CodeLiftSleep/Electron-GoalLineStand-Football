@@ -28,9 +28,9 @@
             formlyConfigProvider.setWrapper([{
                     name: 'panel', //creates a primary panel header
                     template: `
-                        <div class="big-title">
+                        <!--<div class="big-title">
                           {{options.templateOptions.label}}
-                        </div>
+                        </div>-->
 
                         <div class="home-screen">
                           <formly-transclude></formly-transclude>

@@ -1,8 +1,8 @@
 form(ng-submit!="vm.onSubmit()" novalidate class="start-career animated bounceInRight")
     div(class="panel panel-primary")
-        div(class="panel-heading px-nested-panel-heading clearfix mainPanelHeader")
+        div(class="form-league-creation")
             strong(class="control-label") Choose Career Settings
-        div(class="panel-body px-nested-panel-body")
+        div(class="panel-body")
             div(class="sectionLabel")
               strong(class="control-label") General League Settings
             formly-form(model="vm.model" fields="vm.careerLeague" form="vm.form" hide-directive="ng-show")

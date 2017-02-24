@@ -1,4 +1,4 @@
-
+@import 'main';
 /*MENU HOME*/
 
 .title{
@@ -50,4 +50,71 @@
   color:white;
   font:40px NFL_Minnesota_Vikings;
   text-align: center;
+}
+
+
+.form-league-creation {
+  text-align: center;
+  padding-top: 15px;
+  .control-label {
+    color:$red;
+    font: 28px NFL_Minnesota_Vikings;
+  }
+}
+
+.container .panel {
+  border: none;
+  border-radius: 0;
+
+}
+
+.sectionLabel {
+  text-align: center;
+  padding-top: 15px;
+  .control-label {
+    color:$indigo;
+    font: 22px NFL_Minnesota_Vikings;
+  }
+}
+
+
+.display-flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.flex-5 {
+  flex: 5;
+}
+
+.flex-6 {
+  flex: 6;
+}
+
+[class*="flex-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+[class*="flex-"]:first-child {
+  padding-left: 0;
+}
+
+[class*="flex-"]:nth-last-child(2) {
+  padding-right: 0;
 }
