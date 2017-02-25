@@ -15,5 +15,5 @@ form(ng-submit!="vm.onSubmit()" novalidate class="start-career animated bounceIn
             div(class="sectionLabel")
               strong(class="control-label") User Settings
             formly-form(model="vm.model" fields="vm.careerUser" form="vm.form" hide-directive="ng-show")
-            button(type="button" onclick="$('.start-career').removeClass('bounceInRight').addClass('bounceOutLeft')" class="btn btn-primary pull-right hvr-grow-shadow" ng-click!="$state.go('Start.career2', {model: vm.model})") Next Page
+            button(type="button" onclick="$('.start-career').removeClass('bounceInRight').addClass('bounceOutLeft')" class="btn btn-primary pull-right action-button" ng-click!="$state.go('Start.career2', {model: vm.model})") Next Page
               span(style="margin-left: 3px;" class="glyphicon glyphicon-circle-arrow-right pull-right")

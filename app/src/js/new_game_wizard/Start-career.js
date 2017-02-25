@@ -6,471 +6,466 @@
 
             var vm = this;
 
-            vm.careerLeague = [
-              {
-                className: 'row settings',
-                fieldGroup:[
-                  {
-                    className: 'col-md-4',
-                    key: 'StartYear',
-                    type: 'input',
-                    defaultValue: 2016,
-                    templateOptions: {
-                        label: 'Start Year',
-                        type: 'numeric'
-                    }
-                  },
-                  {
-                    className: 'col-md-4',
-                    key: 'LeagueRules',
-                    type: 'nya-bootstrapSelect',
-                    defaultValue: 'NFL',
-                    templateOptions: {
-                        label: 'League Rules',
-                        labelProp: 'value',
-                        valueProp: 'value',
-                        options: [{
-                                value: 'NFL',
-                                id: 'NFL'
-                            },
-                            {
-                                value: 'CFL',
-                                id: 'CFL'
-                            },
-                            {
-                                value: 'College',
-                                id: 'College'
-                            },
-                            {
-                                value: 'Arena',
-                                id: 'Arena'
+            vm.careerLeague = [{
+                    className: 'row settings',
+                    fieldGroup: [{
+                            className: 'col-md-4 creation-league-inputs',
+                            key: 'StartYear',
+                            type: 'input',
+                            defaultValue: 2016,
+                            templateOptions: {
+                                label: 'Start Year',
+                                type: 'numeric'
                             }
-                        ]
-                    }
-                  },
-                  {
-                    className: 'col-md-4',
-                    key: 'FieldType',
-                    type: 'nya-bootstrapSelect',
-                    defaultValue: 'Modern NFL',
-                    templateOptions: {
-                        label: 'Field Type',
-                        labelProp: 'value',
-                        valueProp: 'value',
-                        options: [{
-                                value: 'Modern NFL',
-                                id: 'FTMN'
-                            },
-                            {
-                                value: 'Old NFL',
-                                id: 'FTON'
-                            },
-                            {
-                                value: 'CFL',
-                                id: 'FTCFL'
-                            },
-                            {
-                                value: 'College',
-                                id: 'FTCol'
-                            },
-                            {
-                                value: 'Arena',
-                                id: 'FTAr'
+                        },
+                        {
+                            className: 'col-md-4 creation-league-inputs',
+                            key: 'LeagueRules',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: 'NFL',
+                            templateOptions: {
+                                label: 'League Rules',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: 'NFL',
+                                        id: 'NFL'
+                                    },
+                                    {
+                                        value: 'CFL',
+                                        id: 'CFL'
+                                    },
+                                    {
+                                        value: 'College',
+                                        id: 'College'
+                                    },
+                                    {
+                                        value: 'Arena',
+                                        id: 'Arena'
+                                    }
+                                ]
                             }
-                        ]
-                    }
-                  }
-                ]
-              },
-              {
-                className: 'row settings',
-                fieldGroup:[
-                  {
-                    className: 'col-md-3',
-                    key: 'NumTeams',
-                    type: 'input',
-                    defaultValue: 32,
-                    templateOptions: {
-                        label: 'Number of Teams',
-                        type: 'numeric',
-                        placeholder: 'Between 8-48 teams',
-                        min: 8,
-                        max: 48
-                    }
-                  },
-                  {
-                    className: 'col-md-3',
-                    key: 'NumConf',
-                    type: 'nya-bootstrapSelect',
-                    defaultValue: '2',
-                    templateOptions: {
-                        label: 'Number of Conferences',
-                        labelProp: 'value',
-                        valueProp: 'value',
-                        options: [{
-                                value: '2',
-                                id: 'conf2'
-                            },
-                            {
-                                value: '0',
-                                id: 'conf0'
-                            },
-                            {
-                                value: '1',
-                                id: 'conf1'
-                            },
-                            {
-                                value: '3',
-                                id: 'conf3'
-                            },
-                            {
-                                value: '4',
-                                id: 'conf4'
-                            },
-                            {
-                                value: '5',
-                                id: 'conf5'
-                            },
-                            {
-                                value: '6',
-                                id: 'conf6'
+                        },
+                        {
+                            className: 'col-md-4 creation-league-inputs',
+                            key: 'FieldType',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: 'Modern NFL',
+                            templateOptions: {
+                                label: 'Field Type',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: 'Modern NFL',
+                                        id: 'FTMN'
+                                    },
+                                    {
+                                        value: 'Old NFL',
+                                        id: 'FTON'
+                                    },
+                                    {
+                                        value: 'CFL',
+                                        id: 'FTCFL'
+                                    },
+                                    {
+                                        value: 'College',
+                                        id: 'FTCol'
+                                    },
+                                    {
+                                        value: 'Arena',
+                                        id: 'FTAr'
+                                    }
+                                ]
                             }
-                        ]
-                    }
-                  },
-                  {
-                    className: 'col-md-3',
-                    key: 'NumDiv',
-                    type: 'nya-bootstrapSelect',
-                    defaultValue: '8',
-                    templateOptions: {
-                        label: 'Number of Divisions',
-                        labelProp: 'value',
-                        valueProp: 'value',
-                        options: [{
-                                value: '8',
-                                id: 'div8'
+                        }
+                    ]
+                },
+                {
+                    className: 'row settings',
+                    fieldGroup: [{
+                            className: 'col-md-3 creation-league-inputs',
+                            key: 'NumTeams',
+                            type: 'input',
+                            defaultValue: 32,
+                            templateOptions: {
+                                label: 'Number of Teams',
+                                type: 'numeric',
+                                placeholder: 'Between 8-48 teams',
+                                min: 8,
+                                max: 48
+                            }
+                        },
+                        {
+                            className: 'col-md-3 creation-league-inputs',
+                            key: 'NumConf',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: '2',
+                            templateOptions: {
+                                label: 'Number of Conferences',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: '2',
+                                        id: 'conf2'
+                                    },
+                                    {
+                                        value: '0',
+                                        id: 'conf0'
+                                    },
+                                    {
+                                        value: '1',
+                                        id: 'conf1'
+                                    },
+                                    {
+                                        value: '3',
+                                        id: 'conf3'
+                                    },
+                                    {
+                                        value: '4',
+                                        id: 'conf4'
+                                    },
+                                    {
+                                        value: '5',
+                                        id: 'conf5'
+                                    },
+                                    {
+                                        value: '6',
+                                        id: 'conf6'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            className: 'col-md-3 creation-league-inputs',
+                            key: 'NumDiv',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: '8',
+                            templateOptions: {
+                                label: 'Number of Divisions',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: '8',
+                                        id: 'div8'
+                                    },
+                                    {
+                                        value: '0',
+                                        id: 'div0'
+                                    },
+                                    {
+                                        value: '1',
+                                        id: 'div1'
+                                    },
+                                    {
+                                        value: '2',
+                                        id: 'div2'
+                                    },
+                                    {
+                                        value: '3',
+                                        id: 'div3'
+                                    },
+                                    {
+                                        value: '4',
+                                        id: 'div4'
+                                    },
+                                    {
+                                        value: '5',
+                                        id: 'div5'
+                                    },
+                                    {
+                                        value: '6',
+                                        id: 'div6'
+                                    },
+                                    {
+                                        value: '7',
+                                        id: 'div7'
+                                    },
+                                    {
+                                        value: '9',
+                                        id: 'div9'
+                                    },
+                                    {
+                                        value: '10',
+                                        id: 'div10'
+                                    },
+                                    {
+                                        value: '11',
+                                        id: 'div11'
+                                    },
+                                    {
+                                        value: '12',
+                                        id: 'div12'
+                                    },
+                                ]
+                            }
+                        },
+                        {
+                            className: 'col-md-3 creation-league-inputs',
+                            key: 'StartFantDraft',
+                            type: 'toggleSwitch',
+                            templateOptions: {
+                                label: 'Start with Fantasy Draft?',
+                                toggle: 'Fant',
+                                checked: false,
+                                align: '', //aligns the text label
+                                pull: '' //aligns the toggle switch
                             },
-                            {
-                                value: '0',
-                                id: 'div0'
-                            },
-                            {
-                                value: '1',
-                                id: 'div1'
-                            },
-                            {
-                                value: '2',
-                                id: 'div2'
-                            },
-                            {
-                                value: '3',
-                                id: 'div3'
-                            },
-                            {
-                                value: '4',
-                                id: 'div4'
-                            },
-                            {
-                                value: '5',
-                                id: 'div5'
-                            },
-                            {
-                                value: '6',
-                                id: 'div6'
-                            },
-                            {
-                                value: '7',
-                                id: 'div7'
-                            },
-                            {
-                                value: '9',
-                                id: 'div9'
-                            },
-                            {
-                                value: '10',
-                                id: 'div10'
-                            },
-                            {
-                                value: '11',
-                                id: 'div11'
-                            },
-                            {
-                                value: '12',
-                                id: 'div12'
-                            },
-                        ]
-                    }
-                  },
-                  {
-                    className: 'col-md-3',
-                    key: 'StartFantDraft',
-                    type: 'toggleSwitch',
-                    templateOptions: {
-                        label: 'Start with Fantasy Draft?',
-                        toggle: 'Fant',
-                        checked: false,
-                        align: '', //aligns the text label
-                        pull: '' //aligns the toggle switch
-                    },
-                    controller: function($scope) {
-                        $scope.Update = function(ischecked) {
-                            vm.model.FantDraftType = ischecked ? vm.model.FantDraftType : undefined; //removes type of fantasy draft if its unchecked
-                        };
-                    }
-                  }
-                ]
-              }
+                            controller: function($scope) {
+                                $scope.Update = function(ischecked) {
+                                    vm.model.FantDraftType = ischecked ? vm.model.FantDraftType : undefined; //removes type of fantasy draft if its unchecked
+                                };
+                            }
+                        }
+                    ]
+                }
             ];
 
-            vm.careerGameday = [
-              {
-                className: 'row settings',
-                fieldGroup: [
-                  {
-                        key: 'RosterSize',
-                        className: 'col-md-4',
-                        type: 'nya-bootstrapSelect',
-                        defaultValue: '53',
-                        templateOptions: {
-                            label: 'Regular Season Roster Size',
-                            labelProp: 'value',
-                            valueProp: 'value',
-                            options: [{
-                                    value: '53',
-                                    id: 'RS53'
-                                },
-                                {
-                                    value: '43',
-                                    id: 'RS43'
-                                },
-                                {
-                                    value: '44',
-                                    id: 'RS44'
-                                },
-                                {
-                                    value: '45',
-                                    id: 'RS45'
-                                },
-                                {
-                                    value: '46',
-                                    id: 'RS46'
-                                },
-                                {
-                                    value: '47',
-                                    id: 'RS47'
-                                },
-                                {
-                                    value: '48',
-                                    id: 'RS48'
-                                },
-                                {
-                                    value: '49',
-                                    id: 'RS49'
-                                },
-                                {
-                                    value: '50',
-                                    id: 'RS50'
-                                },
-                                {
-                                    value: '51',
-                                    id: 'RS51'
-                                },
-                                {
-                                    value: '52',
-                                    id: 'RS52'
-                                },
-                                {
-                                    value: '54',
-                                    id: 'RS54'
-                                },
-                                {
-                                    value: '55',
-                                    id: 'RS55'
-                                },
-                                {
-                                    value: '56',
-                                    id: 'RS56'
-                                },
-                                {
-                                    value: '57',
-                                    id: 'RS57'
-                                },
-                                {
-                                    value: '58',
-                                    id: 'RS58'
-                                },
-                                {
-                                    value: '59',
-                                    id: 'RS59'
-                                },
-                                {
-                                    value: '60',
-                                    id: 'RS60'
-                                },
-                                {
-                                    value: '61',
-                                    id: 'RS61'
-                                },
-                                {
-                                    value: '62',
-                                    id: 'RS62'
-                                },
-                                {
-                                    value: '63',
-                                    id: 'RS63'
-                                }
-                            ]
+            vm.careerGameday = [{
+                    className: 'row settings',
+                    fieldGroup: [
+                      {
+                            key: 'RosterSize',
+                            className: 'col-md-4 creation-league-inputs',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: '53',
+                            templateOptions: {
+                                label: 'Regular Season Roster Size',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: '53',
+                                        id: 'RS53'
+                                    },
+                                    {
+                                        value: '43',
+                                        id: 'RS43'
+                                    },
+                                    {
+                                        value: '44',
+                                        id: 'RS44'
+                                    },
+                                    {
+                                        value: '45',
+                                        id: 'RS45'
+                                    },
+                                    {
+                                        value: '46',
+                                        id: 'RS46'
+                                    },
+                                    {
+                                        value: '47',
+                                        id: 'RS47'
+                                    },
+                                    {
+                                        value: '48',
+                                        id: 'RS48'
+                                    },
+                                    {
+                                        value: '49',
+                                        id: 'RS49'
+                                    },
+                                    {
+                                        value: '50',
+                                        id: 'RS50'
+                                    },
+                                    {
+                                        value: '51',
+                                        id: 'RS51'
+                                    },
+                                    {
+                                        value: '52',
+                                        id: 'RS52'
+                                    },
+                                    {
+                                        value: '54',
+                                        id: 'RS54'
+                                    },
+                                    {
+                                        value: '55',
+                                        id: 'RS55'
+                                    },
+                                    {
+                                        value: '56',
+                                        id: 'RS56'
+                                    },
+                                    {
+                                        value: '57',
+                                        id: 'RS57'
+                                    },
+                                    {
+                                        value: '58',
+                                        id: 'RS58'
+                                    },
+                                    {
+                                        value: '59',
+                                        id: 'RS59'
+                                    },
+                                    {
+                                        value: '60',
+                                        id: 'RS60'
+                                    },
+                                    {
+                                        value: '61',
+                                        id: 'RS61'
+                                    },
+                                    {
+                                        value: '62',
+                                        id: 'RS62'
+                                    },
+                                    {
+                                        value: '63',
+                                        id: 'RS63'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            key: 'Inactives',
+                            className: 'col-md-4 creation-league-inputs',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: '7',
+                            templateOptions: {
+                                label: 'Gameday Inactives',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: '7',
+                                        id: 'GI7'
+                                    },
+                                    {
+                                        value: '0',
+                                        id: 'GI0'
+                                    },
+                                    {
+                                        value: '1',
+                                        id: 'GI1'
+                                    },
+                                    {
+                                        value: '2',
+                                        id: 'GI2'
+                                    },
+                                    {
+                                        value: '3',
+                                        id: 'GI3'
+                                    },
+                                    {
+                                        value: '4',
+                                        id: 'GI4'
+                                    },
+                                    {
+                                        value: '5',
+                                        id: 'GI5'
+                                    },
+                                    {
+                                        value: '6',
+                                        id: 'GI6'
+                                    },
+                                    {
+                                        value: '8',
+                                        id: 'GI8'
+                                    },
+                                    {
+                                        value: '9',
+                                        id: 'GI9'
+                                    },
+                                    {
+                                        value: '10',
+                                        id: 'GI10'
+                                    },
+                                    {
+                                        value: '11',
+                                        id: 'GI11'
+                                    },
+                                    {
+                                        value: '12',
+                                        id: 'GI12'
+                                    },
+                                    {
+                                        value: '13',
+                                        id: 'GI13'
+                                    },
+                                    {
+                                        value: '14',
+                                        id: 'GI14'
+                                    },
+                                    {
+                                        value: '15',
+                                        id: 'GI15'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            key: 'PracticeSquad',
+                            className: 'col-md-4 creation-league-inputs',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: '8',
+                            templateOptions: {
+                                label: 'Practice Squad Size',
+                                labelProp: 'value',
+                                valueProp: 'value',
+                                options: [{
+                                        value: '8',
+                                        id: 'PS8'
+                                    },
+                                    {
+                                        value: '0',
+                                        id: 'PS0'
+                                    },
+                                    {
+                                        value: '1',
+                                        id: 'PS1'
+                                    },
+                                    {
+                                        value: '2',
+                                        id: 'PS2'
+                                    },
+                                    {
+                                        value: '3',
+                                        id: 'PS3'
+                                    },
+                                    {
+                                        value: '4',
+                                        id: 'PS4'
+                                    },
+                                    {
+                                        value: '5',
+                                        id: 'PS5'
+                                    },
+                                    {
+                                        value: '6',
+                                        id: 'PS6'
+                                    },
+                                    {
+                                        value: '7',
+                                        id: 'PS7'
+                                    },
+                                    {
+                                        value: '9',
+                                        id: 'PS9'
+                                    },
+                                    {
+                                        value: '10',
+                                        id: 'PS10'
+                                    },
+                                    {
+                                        value: '11',
+                                        id: 'PS11'
+                                    },
+                                    {
+                                        value: '12',
+                                        id: 'PS12'
+                                    },
+                                ]
+                            }
                         }
-                  },
-                  {
-                        key: 'Inactives',
-                        className: 'col-md-4',
-                        type: 'nya-bootstrapSelect',
-                        defaultValue: '7',
-                        templateOptions: {
-                            label: 'Gameday Inactives',
-                            labelProp: 'value',
-                            valueProp: 'value',
-                            options: [{
-                                    value: '7',
-                                    id: 'GI7'
-                                },
-                                {
-                                    value: '0',
-                                    id: 'GI0'
-                                },
-                                {
-                                    value: '1',
-                                    id: 'GI1'
-                                },
-                                {
-                                    value: '2',
-                                    id: 'GI2'
-                                },
-                                {
-                                    value: '3',
-                                    id: 'GI3'
-                                },
-                                {
-                                    value: '4',
-                                    id: 'GI4'
-                                },
-                                {
-                                    value: '5',
-                                    id: 'GI5'
-                                },
-                                {
-                                    value: '6',
-                                    id: 'GI6'
-                                },
-                                {
-                                    value: '8',
-                                    id: 'GI8'
-                                },
-                                {
-                                    value: '9',
-                                    id: 'GI9'
-                                },
-                                {
-                                    value: '10',
-                                    id: 'GI10'
-                                },
-                                {
-                                    value: '11',
-                                    id: 'GI11'
-                                },
-                                {
-                                    value: '12',
-                                    id: 'GI12'
-                                },
-                                {
-                                    value: '13',
-                                    id: 'GI13'
-                                },
-                                {
-                                    value: '14',
-                                    id: 'GI14'
-                                },
-                                {
-                                    value: '15',
-                                    id: 'GI15'
-                                }
-                            ]
-                        }
-                  },
-                  {
-                        key: 'PracticeSquad',
-                        className: 'col-md-4',
-                        type: 'nya-bootstrapSelect',
-                        defaultValue: '8',
-                        templateOptions: {
-                            label: 'Practice Squad Size',
-                            labelProp: 'value',
-                            valueProp: 'value',
-                            options: [{
-                                    value: '8',
-                                    id: 'PS8'
-                                },
-                                {
-                                    value: '0',
-                                    id: 'PS0'
-                                },
-                                {
-                                    value: '1',
-                                    id: 'PS1'
-                                },
-                                {
-                                    value: '2',
-                                    id: 'PS2'
-                                },
-                                {
-                                    value: '3',
-                                    id: 'PS3'
-                                },
-                                {
-                                    value: '4',
-                                    id: 'PS4'
-                                },
-                                {
-                                    value: '5',
-                                    id: 'PS5'
-                                },
-                                {
-                                    value: '6',
-                                    id: 'PS6'
-                                },
-                                {
-                                    value: '7',
-                                    id: 'PS7'
-                                },
-                                {
-                                    value: '9',
-                                    id: 'PS9'
-                                },
-                                {
-                                    value: '10',
-                                    id: 'PS10'
-                                },
-                                {
-                                    value: '11',
-                                    id: 'PS11'
-                                },
-                                {
-                                    value: '12',
-                                    id: 'PS12'
-                                },
-                            ]
-                        }
-                  }
-                ]
-              },
-              {
-                className: 'row',
-                fieldGroup: [
-                    {
+                    ]
+                },
+                {
+                    className: 'row',
+                    fieldGroup: [{
                         key: 'Penalties',
-                        className: 'col-md-12',
+                        className: 'col-md-12 creation-league-inputs',
                         type: 'vertSlider',
                         defaultValue: 100,
                         templateOptions: {
@@ -483,184 +478,183 @@
                                 showTicks: false
                             }
                         }
-                    }
-                  ]
-              },
-              {
-                className: 'row',
-                fieldGroup: [
-                    {
-                        key: 'QuarterLen',
-                        className: 'col-md-4',
-                        type: 'nya-bootstrapSelect',
-                        defaultValue: '15',
-                        templateOptions: {
-                            label: 'Quarter Length',
-                            options: [{
-                                    value: '15',
-                                    id: 'QL15'
-                                },
-                                {
-                                    value: '5',
-                                    id: 'QL5'
-                                },
-                                {
-                                    value: '6',
-                                    id: 'QL6'
-                                },
-                                {
-                                    value: '7',
-                                    id: 'QL7'
-                                },
-                                {
-                                    value: '8',
-                                    id: 'QL8'
-                                },
-                                {
-                                    value: '9',
-                                    id: 'QL9'
-                                },
-                                {
-                                    value: '10',
-                                    id: 'QL10'
-                                },
-                                {
-                                    value: '11',
-                                    id: 'QL11'
-                                },
-                                {
-                                    value: '12',
-                                    id: 'QL12'
-                                },
-                                {
-                                    value: '13',
-                                    id: 'QL13'
-                                },
-                                {
-                                    value: '14',
-                                    id: 'QL14'
-                                },
-                                {
-                                    value: '16',
-                                    id: 'QL16'
-                                },
-                                {
-                                    value: '17',
-                                    id: 'QL17'
-                                },
-                                {
-                                    value: '18',
-                                    id: 'QL18'
-                                },
-                                {
-                                    value: '19',
-                                    id: 'QL19'
-                                },
-                                {
-                                    value: '20',
-                                    id: 'QL20'
-                                }
-                            ]
+                    }]
+                },
+                {
+                    className: 'row',
+                    fieldGroup: [{
+                            key: 'QuarterLen creation-league-inputs',
+                            className: 'col-md-4',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: '15',
+                            templateOptions: {
+                                label: 'Quarter Length',
+                                options: [{
+                                        value: '15',
+                                        id: 'QL15'
+                                    },
+                                    {
+                                        value: '5',
+                                        id: 'QL5'
+                                    },
+                                    {
+                                        value: '6',
+                                        id: 'QL6'
+                                    },
+                                    {
+                                        value: '7',
+                                        id: 'QL7'
+                                    },
+                                    {
+                                        value: '8',
+                                        id: 'QL8'
+                                    },
+                                    {
+                                        value: '9',
+                                        id: 'QL9'
+                                    },
+                                    {
+                                        value: '10',
+                                        id: 'QL10'
+                                    },
+                                    {
+                                        value: '11',
+                                        id: 'QL11'
+                                    },
+                                    {
+                                        value: '12',
+                                        id: 'QL12'
+                                    },
+                                    {
+                                        value: '13',
+                                        id: 'QL13'
+                                    },
+                                    {
+                                        value: '14',
+                                        id: 'QL14'
+                                    },
+                                    {
+                                        value: '16',
+                                        id: 'QL16'
+                                    },
+                                    {
+                                        value: '17',
+                                        id: 'QL17'
+                                    },
+                                    {
+                                        value: '18',
+                                        id: 'QL18'
+                                    },
+                                    {
+                                        value: '19',
+                                        id: 'QL19'
+                                    },
+                                    {
+                                        value: '20',
+                                        id: 'QL20'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            key: 'OTFormat',
+                            className: 'col-md-4 creation-league-inputs',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: 'NFL',
+                            templateOptions: {
+                                label: 'OT Format',
+                                options: [{
+                                        value: 'NFL',
+                                        id: 'OTNFL'
+                                    },
+                                    {
+                                        value: 'CFL',
+                                        id: 'OTCFL'
+                                    },
+                                    {
+                                        value: 'College',
+                                        id: 'OTCol'
+                                    },
+                                    {
+                                        value: 'Sudden Death',
+                                        id: 'OTSud'
+                                    },
+                                    {
+                                        value: 'None',
+                                        id: 'OTNone'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            key: 'OTLength',
+                            className: 'col-md-4 creation-league-inputs',
+                            hideExpression: 'model.OTFormat.value === "None"',
+                            type: 'nya-bootstrapSelect',
+                            defaultValue: 'Quarter Length',
+                            templateOptions: {
+                                label: 'OT Length',
+                                options: [{
+                                        value: 'Quarter Length',
+                                        id: 'OTLQL'
+                                    },
+                                    {
+                                        value: 'Possessions',
+                                        id: 'OTLPos'
+                                    },
+                                    {
+                                        value: '5',
+                                        id: 'OTL5'
+                                    },
+                                    {
+                                        value: '6',
+                                        id: 'OTL6'
+                                    },
+                                    {
+                                        value: '7',
+                                        id: 'OTL7'
+                                    },
+                                    {
+                                        value: '8',
+                                        id: 'OTL8'
+                                    },
+                                    {
+                                        value: '9',
+                                        id: 'OTL9'
+                                    },
+                                    {
+                                        value: '10',
+                                        id: 'OTL10'
+                                    },
+                                    {
+                                        value: '11',
+                                        id: 'OTL11'
+                                    },
+                                    {
+                                        value: '12',
+                                        id: 'OTL12'
+                                    },
+                                    {
+                                        value: '13',
+                                        id: 'OTL13'
+                                    },
+                                    {
+                                        value: '14',
+                                        id: 'OTL14'
+                                    }
+                                ]
+                            }
                         }
-                    },
-                    {
-                        key: 'OTFormat',
-                        className: 'col-md-4',
-                        type: 'nya-bootstrapSelect',
-                        defaultValue: 'NFL',
-                        templateOptions: {
-                            label: 'OT Format',
-                            options: [{
-                                    value: 'NFL',
-                                    id: 'OTNFL'
-                                },
-                                {
-                                    value: 'CFL',
-                                    id: 'OTCFL'
-                                },
-                                {
-                                    value: 'College',
-                                    id: 'OTCol'
-                                },
-                                {
-                                    value: 'Sudden Death',
-                                    id: 'OTSud'
-                                },
-                                {
-                                    value: 'None',
-                                    id: 'OTNone'
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        key: 'OTLength',
-                        className: 'col-md-4',
-                        hideExpression: 'model.OTFormat.value === "None"',
-                        type: 'nya-bootstrapSelect',
-                        defaultValue: 'Quarter Length',
-                        templateOptions: {
-                            label: 'OT Length',
-                            options: [{
-                                    value: 'Quarter Length',
-                                    id: 'OTLQL'
-                                },
-                                {
-                                    value: 'Possessions',
-                                    id: 'OTLPos'
-                                },
-                                {
-                                    value: '5',
-                                    id: 'OTL5'
-                                },
-                                {
-                                    value: '6',
-                                    id: 'OTL6'
-                                },
-                                {
-                                    value: '7',
-                                    id: 'OTL7'
-                                },
-                                {
-                                    value: '8',
-                                    id: 'OTL8'
-                                },
-                                {
-                                    value: '9',
-                                    id: 'OTL9'
-                                },
-                                {
-                                    value: '10',
-                                    id: 'OTL10'
-                                },
-                                {
-                                    value: '11',
-                                    id: 'OTL11'
-                                },
-                                {
-                                    value: '12',
-                                    id: 'OTL12'
-                                },
-                                {
-                                    value: '13',
-                                    id: 'OTL13'
-                                },
-                                {
-                                    value: '14',
-                                    id: 'OTL14'
-                                }
-                            ]
-                        }
-                    }
-                ]
-               }
+                    ]
+                }
 
 
             ];
+
             vm.careerSchedule = [{
                     className: 'row settings',
                     fieldGroup: [{
-                            className: 'col-xs-6',
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'regSeasonGames',
                             type: 'input',
                             defaultValue: 16,
@@ -673,7 +667,7 @@
                             }
                         },
                         {
-                            className: 'col-xs-6',
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'preSeasonGames',
                             type: 'nya-bootstrapSelect',
                             defaultValue: '4',
@@ -713,7 +707,7 @@
                             }
                         },
                         {
-                            className: 'col-xs-6',
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'numByesPerTeam',
                             type: 'nya-bootstrapSelect',
                             defaultValue: '1',
@@ -742,7 +736,7 @@
                             }
                         },
                         {
-                            className: 'col-xs-6',
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'playoffTeamsConf',
                             type: 'nya-bootstrapSelect',
                             defaultValue: '6',
@@ -788,9 +782,13 @@
                                     }
                                 ]
                             }
-                        },
-                        {
-                            className: 'col-xs-6',
+                        }
+                    ]
+                },
+                {
+                    className: 'row settings',
+                    fieldGroup: [{
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'SchedType',
                             type: 'nya-bootstrapSelect',
                             defaultValue: 'NFL',
@@ -822,7 +820,7 @@
                             }
                         },
                         {
-                            className: 'col-xs-6',
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'seasonStart',
                             type: 'nya-bootstrapSelect',
                             defaultValue: 'September',
@@ -880,16 +878,9 @@
                                     }
                                 ]
                             }
-                        }
-                    ]
-                },
-                {
-                    template: '<div class="row">'
-                },
-                {
-                    className: 'row settings',
-                    fieldGroup: [{
-                            className: 'col-md-2 pull-right',
+                        },
+                        {
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'schedIntGames',
                             type: 'toggleSwitch',
                             templateOptions: {
@@ -903,7 +894,7 @@
                             }
                         },
                         {
-                            className: 'col-md-2 pull-left',
+                            className: 'col-sm-3 creation-league-inputs',
                             key: 'IntGamesSeason',
                             hideExpression: '!model.schedIntGames || model.schedIntGames === "No"',
                             type: 'nya-bootstrapSelect',
@@ -968,8 +959,7 @@
                             }
                         }
                     ]
-                },
-
+                }
             ];
 
             vm.careerUser = [{
