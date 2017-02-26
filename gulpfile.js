@@ -57,7 +57,8 @@ gulp.task('js', function() {
             "app/src/js/new_game_wizard/Start-career.js",
             "app/src/js/new_game_wizard/Start-career2.js",
             "app/src/js/new_game_wizard/Start-career3.js",
-            "app/src/js/libs/*.js",
+            "app/src/js/new_game_wizard/d3-barchart.js",
+            "app/src/js/new_game_wizard/angular-3d-carousel.js",
             "app/src/js/main.js"
         ])
         .pipe(deporder())
@@ -86,7 +87,6 @@ gulp.task('css', function() {
             'app/src/css/**/*',
             'node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/nya-bootstrap-select/dist/css/nya-bs-select.css',
-            'node_modules/normalize.css/normalize.css',
             'node_modules/angularjs-slider/dist/rzslider.css',
             'node_modules/css-toggle-switch/dist/toggle-switch.css',
             'node_modules/angular-ui-grid/ui-grid.min.css'

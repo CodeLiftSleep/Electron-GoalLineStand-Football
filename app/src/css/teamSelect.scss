@@ -63,26 +63,20 @@ h1 {
   right: 0;
   margin: auto;
 }
-.modal-dialog {
-  width: 80%;
-}
 
-.modal-body {
-  width: 100% !important;
+.body-background .modal-dialog {
+  width: 100%;
+  margin-top: 0;
 }
 
 .ui-grid {
   width: 100%;
 }
 .viewRoster {
-  margin-top: 32%;
-  margin-left: 25%;
   position: relative;
 }
 
  .teamInfo {
-  margin-top: 32%;
-  margin-left: 40%;
   position: relative;
 }
 
@@ -111,6 +105,11 @@ animation-duration: 2.5s;
 }
 
 .ui-grid-header-cell, .ui-grid-cell, .ui-grid-cell-contents{
-text-align:center;
-position: relative;
+  text-align:center;
+  position: relative;
+}
+
+
+.close-modal-team-select{
+  float:right;
 }

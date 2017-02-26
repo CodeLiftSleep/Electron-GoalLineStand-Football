@@ -1,13 +1,13 @@
-div(class="row animated zoomInRight" ng-cloak)
+.row.animated.zoomInRight.ng-cloak
     span(class="col-md-12 pull-right") Select Your Team:
     div
         carousel(sides="vm.sides" team-selected="teamSelected" team-id="teamId")
-        button(type="button" class="btn btn-primary pull-left viewRoster action-button" ng-click="vm.ViewRoster(teamSelected, teamId)") View Roster
-        button(type="button" class="btn btn-primary pull-left teamInfo action-button"  ng-click="vm.TeamInfo(teamSelected, teamId)") Team Info
+    button(type="button" class="btn btn-primary pull-left viewRoster action-button" ng-click="vm.ViewRoster(teamSelected, teamId)") View Roster
+    button(type="button" class="btn btn-primary pull-left teamInfo action-button"  ng-click="vm.TeamInfo(teamSelected, teamId)") Team Info
 
-div(class="col-md-12") Team Selected: {{teamSelected}}
+.col-md-12 Team Selected: {{teamSelected}}
 
 button(type="button" class="btn btn-primary pull-left action-button" ui-sref="Start.career3")
   span(class="glyphicon glyphicon-circle-arrow-left pull-left") Prev Page
-button(type="button" class="btn btn-primary pull-right action-button" ui-sref="Start.teamSelect") Next Page
-  span(class="glyphicon glyphicon-circle-arrow-right pull-right")
+button(type="button" class="btn btn-primary pull-right action-button" ui-sref="Start.teamSelect")
+  span(class="glyphicon glyphicon-circle-arrow-right pull-right") Next Page

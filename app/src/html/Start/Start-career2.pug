@@ -1,18 +1,18 @@
 form(ng-submit="vm.onSubmit()" novalidate class="start-career2 animated bounceInRight")
-    div( class="panel panel-primary")
-        div(class="form-league-creation")
+    .panel.panel-primary
+        .form-league-creation
             strong(class="control-label") Choose Career Settings 2
-        div( class="panel-body px-nested-panel-body")
-            div(class="sectionLabel")
+        .panel-body.px-nested-panel-body
+            .sectionLabel
               strong(class="control-label") Expansion Settings
             formly-form(model="vm.model" fields="vm.careerExpansion" form="vm.form" hide-directive="ng-show")
-            div(class="sectionLabel")
+            .sectionLabel
               strong(class="control-label") Relocation Settings
             formly-form(model="vm.model" fields="vm.careerRelocation" form="vm.form" hide-directive="ng-show")
-            div(class="sectionLabel")
+            .sectionLabel
               strong(class="control-label") Draft Settings
             formly-form(model="vm.model" fields="vm.careerColDraft" form="vm.form" hide-directive="ng-show")
-            div(class="sectionLabel")
+            .sectionLabel
               strong(class="control-label") Financial Settings
             formly-form(model="vm.model" fields="vm.careerFinancials" form="vm.form" hide-directive="ng-show")
             button(type="button" class="btn btn-primary pull-left action-button" onclick="$('.start-career2').removeClass('bounceInRight').addClass('bounceOutLeft')" ng-click="$state.go(Start.career, {model: vm.model})")

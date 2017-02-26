@@ -1,0 +1,69 @@
+.modal-header(ng-style="teamPri")
+  button(class="btn btn-primary close-modal-team-select" type="button" ng-click="ok()") X
+  h3(class="modal-title" id="modal-title") {{teamSelected}}
+  h4 Team Information:  {{record}}
+  span {{team.DivStanding}} {{teamPlace}} in the {{team.ConfName}} {{team.DivName}}
+  .offense-data
+      p Offense(Rank) {{teamOffYds | number: 2}} yds/gm({{teamOffRank}})
+      p Pass: {{passOffYds | number: 2}} yds/gm yds/gm({{passOffRank}})
+      p Rush: {{rushOffYds | number: 2}} yds/gm({{rushOffRank}})
+      p Pts: {{teamPointsOff | number: 2}} pts/gm({{pointsOffRank}})
+  .defense-data
+      p Defense(Rank): {{teamDefYds | number: 2}} yds/gm({{teamDefRank}})
+      p Pass: {{passDefYds | number: 2}} yds/gm({{passDefRank}})
+      p Rush: {{rushDefYds | number: 2}} yds/gm({{rushDefRank}})
+      p Pts: {{teamPointsDef | number: 2}}  pts/gm({{pointsDefRank}})
+
+.modal-body(id="modal-body" ng-style="teamSec")
+  uib-tabset(active="active")
+    uib-tab(index="0" heading="Team")
+      .row
+        .col-md-3
+          img(style="height: 250px; width: 400px;" src="{{team.StadiumPic}}")
+          p(style="color:white;") {{team.StadiumPic}}
+        .col-md-3.pull-left
+          p(ng-style="textColor") {{team.StadiumName}}
+          p(ng-style="textColor") {{team.City}} {{team.State}}
+          p(ng-style="textColor") Capacity: {{team.StadiumCapacity}}
+          p(ng-style="textColor") Attendance: {{(team.AvgAttendance/team.StadiumCapacity)*100 | number: 2}} %
+
+          p(ng-style="textColor") Upcoming Draft
+          p(ng-style="textColor") Positon: {{team.DraftPosition}}{{draftPos}}
+          p(ng-style="textColor") Biggest Need: QB
+          p(ng-style="textColor") Deepest Position: CB
+
+        .col-md-3.pull-left
+          p(ng-style="textColor") Financials
+          p(ng-style="textColor") Salary Cap: ${{salaryCap | number}}
+          p(ng-style="textColor") Remaining: ${{maxCap - salaryCap | number}}
+          p(ng-style="textColor") Dead Cap: ${{deadCap | number}}
+
+          p(ng-style="textColor") Revenue
+          p(ng-style="textColor") Team Value: ${{teamValue | number}}
+          p(ng-style="textColor") Team Income: ${{revenue | number}}
+          p(ng-style="textColor") Avg Ticket Price: ${{avgTicket | number: 2}}
+
+        .col-md-3.pull-left
+          p(ng-style="textColor") 3 Highest Paid Players
+          p(ng-style="textColor") {{highPlay1}} ${{highPlay1Sal | number}}
+          p(ng-style="textColor") {{highPlay2}}: ${{highPlay2Sal | number}}
+          p(ng-style="textColor") {{highPlay3}}: ${{highPlay3Sal | number}}
+
+          p(ng-style="textColor") 3 Highest Rated Players
+          p(ng-style="textColor") {{highPlay4}} {{highPlay4Rat | number}} Overall Rating
+          p(ng-style="textColor") {{highPlay5}}: {{highPlay5Rat | number}} Overall Rating
+          p(ng-style="textColor") {{highPlay6}}: {{highPlay6Rat | number}} Overall Rating
+
+
+    uib-tab(index="1" heading="Coaches" )
+      .row
+        .col-md-12.pull-left
+          .grid(id="grid1" ui-grid="gridOptions1")
+
+    uib-tab(index="2" heading="Front Office")
+      .row
+        .col-md-12.pull-left
+          .grid(id="grid1" ui-grid="gridOptions2")
+
+.modal-footer(ng-style="teamTer")
+  span(class="pull-left") Owner: {{owner.FName}} {{owner.LName}} Age: {{owner.Age}}  Reputation: {{ownerRep}}  Finances:  {{ownerFin}}

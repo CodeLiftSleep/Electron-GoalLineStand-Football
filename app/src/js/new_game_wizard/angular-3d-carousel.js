@@ -11,9 +11,9 @@
       restrict: 'E',
       template: '' +
         '<div id="carousel" style="{{ styles.carousel }}">' +
-          '<figure ng-repeat="side in sides track by $index" style="{{ styles.figures[$index] }}">' +
-            '<img ng-src="{{ side.image }}">' +
-            '<div>' +
+          '<figure ng-repeat="side in sides track by $index" style="{{ styles.figures[$index] }}" class="team-figure">' +
+            //'<img ng-src="{{ side.image }}">' +
+            '<bars-chart></bars-chart>' +
               '<h2>{{ side.title }}</h2>' +
               '<hr>' +
               '<ul>' +

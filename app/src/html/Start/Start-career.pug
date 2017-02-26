@@ -1,18 +1,18 @@
 form(ng-submit!="vm.onSubmit()" novalidate class="start-career animated bounceInRight")
-    div(class="panel panel-primary")
-        div(class="form-league-creation")
+    .panel.panel-primary
+        .form-league-creation
             strong(class="control-label") Choose Career Settings
-        div(class="panel-body")
-            div(class="sectionLabel")
+        .panel-body
+            .sectionLabel
               strong(class="control-label") General League Settings
             formly-form(model="vm.model" fields="vm.careerLeague" form="vm.form" hide-directive="ng-show")
-            div(class="sectionLabel")
+            .sectionLabel
               strong(class="control-label") Gameday Settings
             formly-form(model="vm.model" fields="vm.careerGameday" form="vm.form" hide-directive="ng-show")
-            div(class="sectionLabel")
+            .sectionLabel
               strong(class="control-label") Schedule Settings
             formly-form(model="vm.model" fields="vm.careerSchedule" form="vm.form" hide-directive="ng-show")
-            div(class="sectionLabel")
+            .sectionLabel
               strong(class="control-label") User Settings
             formly-form(model="vm.model" fields="vm.careerUser" form="vm.form" hide-directive="ng-show")
             button(type="button" onclick="$('.start-career').removeClass('bounceInRight').addClass('bounceOutLeft')" class="btn btn-primary pull-right action-button" ng-click!="$state.go('Start.career2', {model: vm.model})") Next Page
