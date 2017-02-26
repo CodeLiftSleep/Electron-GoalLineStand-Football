@@ -3,6 +3,13 @@
     padding: 3px;
 }
 
+/*Barchart team stats*/
+
+.bar {
+     fill: steelblue;
+     fill-opacity: .9;
+ }
+
 .chart div {
   width: 0;
   transition: all 1s ease-out;
@@ -19,3 +26,8 @@
   color: white;
   box-shadow: 2px 2px 2px #666;
 }
+
+text.value {
+        font-size: 120%;
+        fill: white;
+    }

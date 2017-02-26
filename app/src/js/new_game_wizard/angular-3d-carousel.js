@@ -12,13 +12,13 @@
       template: '' +
         '<div id="carousel" style="{{ styles.carousel }}">' +
           '<figure ng-repeat="side in sides track by $index" style="{{ styles.figures[$index] }}" class="team-figure">' +
-            //'<img ng-src="{{ side.image }}">' +
-            '<bars-chart></bars-chart>' +
+            '<img ng-src="{{ side.image }}">' +
+            '<bars-chart data=side.listItemsData></bars-chart>' +
               '<h2>{{ side.title }}</h2>' +
               '<hr>' +
-              '<ul>' +
-                '<li ng-repeat="li in side.listItems track by $index">{{ li }}</li>' +
-              '</ul>' +
+              //'<ul>' +
+              //  '<li ng-repeat="li in side.listItems track by $index">{{ li }}</li>' +
+              //'</ul>' +
             '</div>' +
           '</figure>' +
         '</div>',
