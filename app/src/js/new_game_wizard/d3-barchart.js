@@ -6,24 +6,24 @@
             return {
                 restrict: 'E',
                 replace: false,
-                scope:{
+                scope: {
                     data: '=data'
                 },
                 link: function(scope, element, attrs) {
                     var svg = d3.select(element[0])
                         .append("svg")
                         .style("width", 200)
-                        .style("height", 130),
+                        .style("height", 200),
                         margin = {
                             top: 20,
                             right: 20,
                             bottom: 30,
                             left: 80
                         },
-                        width = 100,
-                        height = 130;
+                        width = 200,
+                        height = 200;
 
-                    var x = d3.scaleLinear().domain([0, 100]).range([0, 100]);
+                    var x = d3.scaleLinear().range([0, 100]);
                     var y = d3.scaleBand().range([height, 0]);
 
                     var g = svg.append("g")
@@ -57,9 +57,9 @@
                         .enter();
 
                     bar.append("rect")
-                      .attr("class", "bar")
+                        .attr("class", "bar")
                         .attr("x", 0)
-                        .attr("height", y.bandwidth())
+                        .attr("height", 20)
                         .attr("y", function(d) {
                             return y(d.area);
                         })
@@ -67,12 +67,16 @@
                             return x(d.value);
                         })
                     bar.append("text")
-                      .attr("class", "label")
-                      .attr("y", function(d) { return y(d.area)+20; })
-                      .attr("x", function(d) {
-                          return x(d.value) -15;
-                      })
-                      .text(function(d){  return d.value;})
+                        .attr("class", "label")
+                        .attr("y", function(d) {
+                            return y(d.area) + 20;
+                        })
+                        .attr("x", function(d) {
+                            return x(d.value) - 15;
+                        })
+                        .text(function(d) {
+                            return d.value;
+                        })
 
                 }
             };

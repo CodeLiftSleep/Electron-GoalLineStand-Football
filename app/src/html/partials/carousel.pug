@@ -1,0 +1,6 @@
+#carousel(style="{{ styles.carousel }}")
+    figure(ng-repeat="side in sides track by $index" style="{{ styles.figures[$index] }}" class="team-figure")
+      .row
+        h2(class="col-sm-12") {{ side.title }}
+        img(ng-src="{{ side.image }}", class="col-sm-8")
+        bars-chart(data="side.listItemsData", class="col-sm-4")

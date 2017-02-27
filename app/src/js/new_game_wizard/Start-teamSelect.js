@@ -591,8 +591,7 @@
                 //load the teams from the DB.Teams object
                 angular.forEach(DB.load.data.Teams, function(value) {
                     vm.sides.push({
-                        image: "../img/logos/" + value.TeamLogoPath.slice(23),
-                        StadiumPic: "../img/logos/" + value.StadiumPic.slice(7),
+                        image: "../img/logos/" + value.TeamLogoPath,
                         teamID: value.TeamID,
                         title: value.TeamName + ' ' + value.TeamNickname,
                         listItems: ['Offense Rating: 85', 'Defense Rating: 88', 'Special Teams Rating: 79'],
