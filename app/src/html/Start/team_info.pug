@@ -3,24 +3,31 @@
   h3(class="modal-title" id="modal-title") {{teamSelected}}
   h4 Team Information:  {{record}}
   span {{team.DivStanding}} {{teamPlace}} in the {{team.ConfName}} {{team.DivName}}
-  .offense-data
-      p Offense(Rank) {{teamOffYds | number: 2}} yds/gm({{teamOffRank}})
-      p Pass: {{passOffYds | number: 2}} yds/gm yds/gm({{passOffRank}})
-      p Rush: {{rushOffYds | number: 2}} yds/gm({{rushOffRank}})
-      p Pts: {{teamPointsOff | number: 2}} pts/gm({{pointsOffRank}})
-  .defense-data
-      p Defense(Rank): {{teamDefYds | number: 2}} yds/gm({{teamDefRank}})
-      p Pass: {{passDefYds | number: 2}} yds/gm({{passDefRank}})
-      p Rush: {{rushDefYds | number: 2}} yds/gm({{rushDefRank}})
-      p Pts: {{teamPointsDef | number: 2}}  pts/gm({{pointsDefRank}})
+
 
 .modal-body(id="modal-body" ng-style="teamSec")
+  .row
+    .col-sm-6
+      .offense-data
+
+          p Offense(Rank) {{teamOffYds | number: 2}} yds/gm({{teamOffRank}})
+          bars-chart(data='[{"rating": "pass off Rank","value":passOffRank},{"rating": "rushOffRank","value": rushOffRank},{"rating": "pointsOffRank","value": pointsOffRank}]', class="col-sm-4")
+          //p Pass: {{passOffYds | number: 2}} yds/gm yds/gm({{passOffRank}})
+          //p Rush: {{rushOffYds | number: 2}} yds/gm({{rushOffRank}})
+          //p Pts: {{teamPointsOff | number: 2}} pts/gm({{pointsOffRank}})
+    .col-sm-6
+      .defense-data
+          p Defense(Rank): {{teamDefYds | number: 2}} yds/gm({{teamDefRank}})
+          bars-chart(data='[{"rating": "passDefRank","value":passDefRank},{"rating": "rushDefRank","value": rushDefRank},{"rating": pointsDefRank,"value": pointsDefRank}]', class="col-sm-4")
+          //p Pass: {{passDefYds | number: 2}} yds/gm({{passDefRank}})
+          //p Rush: {{rushDefYds | number: 2}} yds/gm({{rushDefRank}})
+          //p Pts: {{teamPointsDef | number: 2}}  pts/gm({{pointsDefRank}})
+
   uib-tabset(active="active")
     uib-tab(index="0" heading="Team")
       .row
         .col-md-3
           img(style="height: 250px; width: 400px;" src="../img/stadiums/{{team.StadiumPic}}")
-          p(style="color:white;") {{team.StadiumPic}}
         .col-md-3.pull-left
           p(ng-style="textColor") {{team.StadiumName}}
           p(ng-style="textColor") {{team.City}} {{team.State}}

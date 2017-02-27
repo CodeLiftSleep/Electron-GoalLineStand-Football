@@ -29,7 +29,7 @@
                       var y = d3.scaleLinear()
                                 .range([height, 0]);
 
-                      x.domain(scope.data.map(function(d) { return d.area; }));
+                      x.domain(scope.data.map(function(d) { return d.rating; }));
                       y.domain([0, d3.max(scope.data, function(d) { return d.value; })]);
 
 
@@ -37,7 +37,7 @@
                         .data(scope.data)
                       .enter().append("rect")
                         .attr("class", "bar")
-                        .attr("x", function(d) { return x(d.area); })
+                        .attr("x", function(d) { return x(d.rating); })
                         .attr("width", x.bandwidth())
                         .attr("y", function(d) { return y(d.value); })
                         .attr("height", function(d) { return height - y(d.value); });

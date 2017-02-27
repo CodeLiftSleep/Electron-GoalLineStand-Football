@@ -1,3 +1,5 @@
+@import 'main';
+
 span {
     text-align: center;
 }
@@ -41,6 +43,7 @@ h1 {
 .body-background .modal-dialog {
   width: 100%;
   margin-top: 0;
+  background-color: white;
 }
 
 .ui-grid {
@@ -86,4 +89,18 @@ animation-duration: 2.5s;
 
 .close-modal-team-select{
   float:right;
+}
+
+[uib-modal-window]{
+  height: 100%;
+}
+
+
+.offense-data, .defense-data{
+  margin: auto;
+  width: inherit;
+}
+
+.modal-body #modal-body{
+  background-color: white;
 }

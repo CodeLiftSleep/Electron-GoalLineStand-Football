@@ -595,7 +595,7 @@
                         teamID: value.TeamID,
                         title: value.TeamName + ' ' + value.TeamNickname,
                         listItems: ['Offense Rating: 85', 'Defense Rating: 88', 'Special Teams Rating: 79'],
-                        listItemsData: [{"area": "Offense","value": 80},{"area": "Defense","value": 98},{"area": "Special","value": 79}]
+                        listItemsData: [{"rating": "Offense","value": 80},{"rating": "Defense","value": 98},{"rating": "Special","value": 79}]
                     });
                 });
 
