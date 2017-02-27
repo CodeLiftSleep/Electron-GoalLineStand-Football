@@ -2,5 +2,6 @@
     figure(ng-repeat="side in sides track by $index" style="{{ styles.figures[$index] }}" class="team-figure")
       .row
         h2(class="col-sm-12") {{ side.title }}
-        img(ng-src="{{ side.image }}", class="col-sm-8")
-        bars-chart(data="side.listItemsData", class="col-sm-4")
+        .team-img.col-sm-8
+          img(ng-src="{{ side.image }}")
+        bars-chart(width=200 height=150 data="side.listItemsData", class="col-sm-4 bar-chart-team")

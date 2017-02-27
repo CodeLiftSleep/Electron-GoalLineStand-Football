@@ -5,20 +5,19 @@
   span {{team.DivStanding}} {{teamPlace}} in the {{team.ConfName}} {{team.DivName}}
 
 
-.modal-body(id="modal-body" ng-style="teamSec")
+.modal-body(id="modal-body")
   .row
     .col-sm-6
       .offense-data
-
           p Offense(Rank) {{teamOffYds | number: 2}} yds/gm({{teamOffRank}})
-          bars-chart(data='[{"rating": "pass off Rank","value":passOffRank},{"rating": "rushOffRank","value": rushOffRank},{"rating": "pointsOffRank","value": pointsOffRank}]', class="col-sm-4")
+          bars-chart(width=250 height=200 data='[{"rating": "pass off Rank","value":passOffRank},{"rating": "rushOffRank","value": rushOffRank},{"rating": "pointsOffRank","value": pointsOffRank}]', class="col-sm-4")
           //p Pass: {{passOffYds | number: 2}} yds/gm yds/gm({{passOffRank}})
           //p Rush: {{rushOffYds | number: 2}} yds/gm({{rushOffRank}})
           //p Pts: {{teamPointsOff | number: 2}} pts/gm({{pointsOffRank}})
     .col-sm-6
       .defense-data
           p Defense(Rank): {{teamDefYds | number: 2}} yds/gm({{teamDefRank}})
-          bars-chart(data='[{"rating": "passDefRank","value":passDefRank},{"rating": "rushDefRank","value": rushDefRank},{"rating": pointsDefRank,"value": pointsDefRank}]', class="col-sm-4")
+          bars-chart(width=250 height=200 data='[{"rating": "passDefRank","value":passDefRank},{"rating": "rushDefRank","value": rushDefRank},{"rating": "pointsDefRank","value": pointsDefRank}]', class="col-sm-4")
           //p Pass: {{passDefYds | number: 2}} yds/gm({{passDefRank}})
           //p Rush: {{rushDefYds | number: 2}} yds/gm({{rushDefRank}})
           //p Pts: {{teamPointsDef | number: 2}}  pts/gm({{pointsDefRank}})
@@ -29,37 +28,37 @@
         .col-md-3
           img(style="height: 250px; width: 400px;" src="../img/stadiums/{{team.StadiumPic}}")
         .col-md-3.pull-left
-          p(ng-style="textColor") {{team.StadiumName}}
-          p(ng-style="textColor") {{team.City}} {{team.State}}
-          p(ng-style="textColor") Capacity: {{team.StadiumCapacity}}
-          p(ng-style="textColor") Attendance: {{(team.AvgAttendance/team.StadiumCapacity)*100 | number: 2}} %
+          p {{team.StadiumName}}
+          p {{team.City}} {{team.State}}
+          p Capacity: {{team.StadiumCapacity}}
+          p Attendance: {{(team.AvgAttendance/team.StadiumCapacity)*100 | number: 2}} %
 
-          p(ng-style="textColor") Upcoming Draft
-          p(ng-style="textColor") Positon: {{team.DraftPosition}}{{draftPos}}
-          p(ng-style="textColor") Biggest Need: QB
-          p(ng-style="textColor") Deepest Position: CB
-
-        .col-md-3.pull-left
-          p(ng-style="textColor") Financials
-          p(ng-style="textColor") Salary Cap: ${{salaryCap | number}}
-          p(ng-style="textColor") Remaining: ${{maxCap - salaryCap | number}}
-          p(ng-style="textColor") Dead Cap: ${{deadCap | number}}
-
-          p(ng-style="textColor") Revenue
-          p(ng-style="textColor") Team Value: ${{teamValue | number}}
-          p(ng-style="textColor") Team Income: ${{revenue | number}}
-          p(ng-style="textColor") Avg Ticket Price: ${{avgTicket | number: 2}}
+          p Upcoming Draft
+          p Positon: {{team.DraftPosition}}{{draftPos}}
+          p Biggest Need: QB
+          p Deepest Position: CB
 
         .col-md-3.pull-left
-          p(ng-style="textColor") 3 Highest Paid Players
-          p(ng-style="textColor") {{highPlay1}} ${{highPlay1Sal | number}}
-          p(ng-style="textColor") {{highPlay2}}: ${{highPlay2Sal | number}}
-          p(ng-style="textColor") {{highPlay3}}: ${{highPlay3Sal | number}}
+          p Financials
+          p Salary Cap: ${{salaryCap | number}}
+          p Remaining: ${{maxCap - salaryCap | number}}
+          p Dead Cap: ${{deadCap | number}}
 
-          p(ng-style="textColor") 3 Highest Rated Players
-          p(ng-style="textColor") {{highPlay4}} {{highPlay4Rat | number}} Overall Rating
-          p(ng-style="textColor") {{highPlay5}}: {{highPlay5Rat | number}} Overall Rating
-          p(ng-style="textColor") {{highPlay6}}: {{highPlay6Rat | number}} Overall Rating
+          p Revenue
+          p Team Value: ${{teamValue | number}}
+          p Team Income: ${{revenue | number}}
+          p Avg Ticket Price: ${{avgTicket | number: 2}}
+
+        .col-md-3.pull-left
+          p 3 Highest Paid Players
+          p {{highPlay1}} ${{highPlay1Sal | number}}
+          p {{highPlay2}}: ${{highPlay2Sal | number}}
+          p {{highPlay3}}: ${{highPlay3Sal | number}}
+
+          p 3 Highest Rated Players
+          p {{highPlay4}} {{highPlay4Rat | number}} Overall Rating
+          p {{highPlay5}}: {{highPlay5Rat | number}} Overall Rating
+          p {{highPlay6}}: {{highPlay6Rat | number}} Overall Rating
 
 
     uib-tab(index="1" heading="Coaches" )

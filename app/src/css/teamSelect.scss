@@ -11,9 +11,24 @@ span {
         color: black;
       }
 
-      img {
-        width: 30%;
+      .team-img{
+        position: relative;
+        min-height: 150px;
+        width:40%;
         height: 30%;
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25px;
+        right: 0;
+        margin: auto;
       }
 
       button {
@@ -101,6 +116,6 @@ animation-duration: 2.5s;
   width: inherit;
 }
 
-.modal-body #modal-body{
+.modal-body{
   background-color: white;
 }
